@@ -1,0 +1,194 @@
+:root {
+	--color1: #002f21;
+	--color2: #006848; 
+}
+
+.contenedor {
+	max-width: 700px;
+	width: 100%;
+	height: 100%;
+	max-height: 90vh;
+	overflow: auto;
+	box-shadow: 0 2px 10px rgba(139,139,139,.50);
+	border-radius: 3px;
+	display: grid;
+	grid-template-rows: auto auto 1fr;
+}
+
+/* * --- --- ---  HEADER --- --- --- */
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 60px;
+	padding: 0 20px;
+	background: var(--color2);
+	color: #fff;
+	border-radius: 3px 3px 0px 0px;
+}
+
+.header-titulo {
+	font-weight: 400;
+	font-size: 24px;
+}
+
+.header-boton {
+	background: none;
+	font-size: 16px;
+	color: rgb(255, 255, 255);
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background: var(--color1);
+	padding: 5px 10px;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+}
+
+.header-boton-icono {
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+/* * --- --- ---  FORMULARIO AGREGAR --- --- --- */
+
+.formulario-tareas {
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	padding: 20px;
+	box-shadow: 0 2px 10px rgba(139,139,139,.25);
+}
+
+.formulario-tareas-input {
+	border: none;
+	padding: 10px;
+	width: 100%;
+	font-size: 20px;
+	border-bottom: 2px solid #b8b8b8;
+}
+
+.formulario-tareas-input:focus {
+	outline: none;
+	border-bottom: 2px solid var(--color2);
+}
+
+.formulario-tareas-btn {
+	position: absolute;
+	bottom: 40px;
+	right: 20px;
+	top: 30px;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+}
+
+.formulario-tareas-icono-btn {
+	font-size: 22px;
+	color: var(--color1);
+
+}
+
+/* * --- --- ---  LISTA TAREAS --- --- --- */
+
+.lista-tareas {
+	list-style: none;
+	height: 100%;
+	overflow: auto;
+	background-color: white;
+}
+
+.lista-tareas-tarea {
+	height: 60px;
+	padding: 0 20px;
+	align-items: center;
+	color: #1b1b1b;
+	background-color: #ffffff;
+	font-size: 18px;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+}
+
+.lista-tareas-texto {
+	text-align: left;
+	width: 100%;
+}
+
+.lista-tareas-tarea:hover .lista-tareas-icono-accion {
+	opacity: 0.5;
+}
+
+
+.lista-tareas-tarea:nth-child(even) {
+	background: #f6f5f5;
+}
+
+.lista-tareas-contenedor-botones {
+	display: flex;
+}
+
+.lista-tareas-icono {
+	cursor: pointer;
+	font-size: 16px;
+	color: black;
+}
+
+.lista-tareas-icono-check {
+	margin-right: 20px;
+	font-size: 26px;
+	color: rgb(206, 206, 206);
+}
+.lista-tareas-icono-check-green {
+	color: var(--color2);
+	margin-right: 20px;
+	font-size: 26px;
+}
+
+.lista-tareas-icono-accion {
+	margin-left: 20px;
+	opacity: 0;
+	transition: .3s ease all;
+}
+
+.lista-tareas-mensaje {
+	text-align: center;
+	color: #b8b8b8;
+	font-size: 20px;
+	padding: 40px 20px;
+}
+
+/* * --- --- ---  FORMULARIO EDITAR TAREA --- --- --- */
+
+.formulario-editar-tarea {
+	display: flex;
+}
+
+.formulario-editar-tarea-input {
+	width: 100%;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid #b8b8b8;
+	background: none;
+	font-size: 20px;
+	margin-right: 20px;
+}
+
+.formulario-editar-tarea-input:focus {
+	outline: none;
+	border-bottom: 2px solid var(--color2);
+}
+
+
+.formulario-editar-tarea-btn {
+	border: none;
+	background: var(--color1);
+	cursor: pointer;
+	color: #fff;
+	padding: 0 10px;
+	border-radius: 3px;
+}
